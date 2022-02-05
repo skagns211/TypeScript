@@ -12,17 +12,16 @@ const StyledBoard = styled.div`
 `;
 
 interface myProps {
-  numbers: number;
+  numbers: number[];
+  handleClick: (num: number) => void;
 }
 
-function Board({ numbers }: myProps) {
+function Board({ numbers, handleClick }: myProps) {
   return (
     <StyledBoard>
-      <Box></Box>
-      <Box></Box>
-      <Box></Box>
-      <Box></Box>
-      <Box></Box>
+      {numbers.map((el: number, idx: number) => {
+        return <Box numbers={el} key={idx} handleClick={handleClick} />;
+      })}
     </StyledBoard>
   );
 }
