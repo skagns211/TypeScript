@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
-import Board from '../components/Board';
+import React, { useState } from "react";
+import styled from "styled-components";
+import Board from "../components/Board";
 
 const StyledBody = styled.div`
   width: 600px;
@@ -11,9 +11,19 @@ const StyledBody = styled.div`
   align-items: center;
 `;
 
+const startBtn = styled.button`
+  margin-top: 30px;
+  width: 100px;
+  height: 50px;
+`;
+
 const arr: any = [];
 for (let i = 1; i <= 25; i++) {
   arr.push(i);
+}
+
+interface myFunc {
+  onClick: () => void;
 }
 
 function Main() {
@@ -26,7 +36,7 @@ function Main() {
     //   if (num === currentNum)
     if (num === currentNum) {
       if (num === 50) {
-        console.log('Clear!');
+        console.log("Clear!");
       }
       const index = numbers.indexOf(num);
       setNumbers((numbers: number[]) => [
@@ -56,6 +66,11 @@ function Main() {
   return (
     <StyledBody>
       <Board numbers={numbers} handleClick={handleClick}></Board>
+      {playingGame ? (
+        "playing.."
+      ) : (
+        <startBtn onClick={gameStart}>start</startBtn>
+      )}
     </StyledBody>
   );
 }

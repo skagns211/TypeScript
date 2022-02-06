@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import Box from './Box';
+import React from "react";
+import styled from "styled-components";
+import Box from "./Box";
 
 const StyledBoard = styled.div`
   width: 400px;

@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const StyledBox = styled.span`
   border: 3px solid red;
@@ -15,7 +15,11 @@ interface boxProps {
 }
 
 function Box({ numbers, handleClick }: boxProps) {
-  return <StyledBox onClick={() => handleClick(numbers)}>{numbers !== 0 ? numbers : null}</StyledBox>;
+  return (
+    <StyledBox onClick={() => handleClick(numbers)}>
+      {numbers !== 0 ? numbers : null}
+    </StyledBox>
+  );
 }
 
 export default Box;
