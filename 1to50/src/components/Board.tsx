@@ -20,7 +20,7 @@ function Board({ numbers, handleClick }: myProps) {
   return (
     <StyledBoard>
       {numbers.map((el: number, idx: number) => {
-        return <Box numbers={el} key={idx} handleClick={handleClick} />;
+        return <Box numbers={el} key={idx} handleClick={handleClick} />
       })}
     </StyledBoard>
   );

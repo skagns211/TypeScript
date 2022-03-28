@@ -12,6 +12,7 @@ const StyledBox = styled.span`
 interface boxProps {
   numbers: number;
   handleClick: (num: number) => void;
+  key: number
 }
 
 function Box({ numbers, handleClick }: boxProps) {
