@@ -1,3 +1,5 @@
+// test!
+
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const CryptoJS = require("crypto-js");
