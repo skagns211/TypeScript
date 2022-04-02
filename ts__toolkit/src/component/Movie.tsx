@@ -4,7 +4,7 @@ import axios from "axios";
 
 // interface dataProp {
 //   data: [];
-// }
+// };
 
 const Movie = () => {
   const API = process.env.REACT_APP_API;
